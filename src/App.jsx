@@ -93,23 +93,45 @@ function App() {
       return `Commands:\nwhoami\nabout\nprojects\nskills\nexperience\ncontact\ndate\necho <text>\ncat <project>\nopen github\nopen linkedin\nhack\nclear`;
     if (cmd === "whoami") return "Harsh Choubey - DevOps Engineer";
     if (cmd === "about")
-      return `👨‍💻 Harsh Choubey\n\nDevOps Engineer with hands-on experience in:\n- CI/CD pipelines (GitHub Actions)\n- Docker & containerization\n- Kubernetes basics\n- Cloud & automation\n\nFocused on building secure and scalable systems 🚀`;
+      return ` 👨‍💻 I am an aspiring DevOps Engineer with a strong focus on building reliable, automated, and secure systems. My interest lies in bridging the gap between development and operations by creating smooth and efficient workflows that make software delivery faster and more dependable.
+
+I have hands on experience working with tools like Docker, GitHub Actions, and Kubernetes fundamentals, where I have built and deployed projects using CI CD pipelines and containerized environments. I enjoy turning complex processes into simple, repeatable solutions through automation.
+
+I am continuously learning and improving my skills in cloud technologies, system design, and infrastructure automation. I believe in writing clean, efficient configurations and following best practices that align with real world DevOps standards.
+
+What drives me is the challenge of solving problems and optimizing systems. I aim to contribute to environments where I can build scalable solutions, improve deployment processes, and grow as a DevOps professional.
+
+I am currently looking for opportunities to apply my skills, learn from experienced teams, and contribute to impactful projects. 🚀`;
     if (cmd === "projects")
-      return `📂 Projects:\n\n1. devsecops-pipeline\n2. docker-flask-app\n3. k8s-deployment\n\n👉 Use: cat <project-name>`;
+      return `📂 Projects:\n\n1. Ai-Bank-App\n2. AWS-serverless-taskmaster\n3. Terraform-capstone\n\n👉 Use: cat <project-name>`;
     if (cmd.startsWith("cat ")) {
       const name = cmd.split(" ")[1];
-      if (name === "devsecops-pipeline")
-        return `🚀 DevSecOps Pipeline\n- GitHub Actions CI/CD\n- Dockerized Flask App\n- Trivy Security Scan\n\nGitHub:\nhttps://github.com/Harsh7209/github-actions-devsecops`;
-      if (name === "docker-flask-app")
-        return `🐳 Docker Flask App\n- Containerized Python app\n\nGitHub:\n#add-link`;
+      if (name === "Ai-Bank-App")
+        return `🚀 Built a fully automated CI CD pipeline using GitHub Actions, reducing manual deployment effort by over 70 percent and enabling faster and consistent releases. Containerized the application using Docker and deployed it on Kubernetes, ensuring scalable and reliable application delivery.\n Integrated security into the development lifecycle by incorporating Trivy for automated vulnerability scanning, enabling early detection of security issues and improving overall code quality. \n Reduced deployment time by 60 percent through CI CD automation.
+Implemented containerized deployment using Docker and Kubernetes.
+Integrated security scanning within the pipeline using Trivy.\n\nGitHub:\nhttps://github.com/Harsh7209/Ai-Bankapp-DevSecOps.git`;
+      if (name === "AWS-serverless-taskmaster")
+        return `Built and deployed the application using the Serverless Framework, enabling automated provisioning and management of cloud resources. Leveraged AWS services including S3 for storage, DynamoDB for NoSQL data management, and Load Balancer for handling traffic distribution and improving application reliability.\n
+
+Implemented Infrastructure as Code using Terraform, allowing consistent, repeatable, and version controlled deployments across environments. Automated resource creation reduced manual setup effort by over 70 percent and improved deployment consistency.\n Automated infrastructure provisioning using Terraform \n
+Deployed serverless application using Serverless Framework \n 
+Utilized AWS services such as S3 and DynamoDB for scalable architecture \n
+Implemented load balancing for improved availability and traffic handling\n
+Reduced manual configuration effort by over 70 percent. \n \n\nGitHub:\nhttps://github.com/Harsh7209/aws-serverless-taskmaster.git`;
       if (name === "k8s-deployment")
-        return `☸️ Kubernetes Deployment\n- YAML configs\n- Scaling setup\n\nGitHub:\n#add-link`;
+        return `Designed and implemented a multi environment infrastructure setup using Terraform, focusing on scalability, consistency, and Infrastructure as Code best practices. This project demonstrates the ability to manage and provision cloud resources across environments such as development, staging, and production. \n Implemented environment specific configurations using variables and workspaces, allowing dynamic control over resource parameters such as instance count, storage, and scaling based on the target environment. This approach ensured flexibility while maintaining a single source of truth . \n Automated infrastructure provisioning reduced manual setup effort by over 70 percent and improved consistency across deployments. The modular design also enhanced maintainability and aligned with real world infrastructure management practices. \n Designed modular Infrastructure as Code using Terraform modules.\n Provisioned multi environment infrastructure for dev, staging, and production. \n Deployed EC2, S3, and DynamoDB resources with dynamic configurations.\n Improved reusability and maintainability through modular  architecture. \n \n\nGitHub:\nhttps://github.com/Harsh7209/Terraform-Capstone.git`;
       return "Project not found";
     }
     if (cmd === "skills")
-      return `🛠 Skills:\n- Docker 🐳\n- Kubernetes ☸️\n- GitHub Actions ⚙️\n- Linux 🐧\n- AWS (Basics) ☁️\n- Python 🐍\n\n👉 Tools: Git, Bash, VS Code`;
+      return `🛠 Skills:\n-
+🐧 linux | 🐙 git | github | 🐳 docker | ⚙️ github actions
+☸️ kubernetes | 🏗️ terraform | 🔧 ansible
+📊 prometheus | grafana | 🔍 opentelemetry `;
     if (cmd === "experience")
-      return `💼 Experience:\n\n🚀 DevOps Projects (Self)\n- Built end-to-end DevSecOps pipeline\n- Automated Docker builds & deployments\n- Integrated security scanning (Trivy)\n\n📚 Continuous learner in DevOps & Cloud`;
+      return `💼 Experience:\n\n🚀 🔐 AI BankApp DevSecOps Pipeline
+Designed and implemented an end to end DevSecOps pipeline for a banking application, focusing on secure and automated delivery. Built CI CD workflows using GitHub Actions, reducing manual deployment effort by 70 percent and improving release consistency. Containerized the application using Docker and deployed it on Kubernetes for scalable and reliable execution. Integrated Trivy for automated vulnerability scanning, embedding security directly into the pipeline.\n \n ☁️ AWS Serverless TaskMaster
+Developed a cloud native serverless application using AWS and the Serverless Framework, enabling scalable and cost efficient architecture. Automated infrastructure provisioning using Terraform, reducing manual setup effort by over 70 percent. Utilized AWS services such as S3 and DynamoDB for storage and data management, and implemented load balancing to ensure high availability and efficient traffic handling. \n 🏗️ Terraform Capstone Project
+Engineered a multi environment infrastructure setup using Terraform, supporting development, staging, and production environments. Built reusable Terraform modules for EC2, S3, and DynamoDB, enabling scalable and maintainable infrastructure design. Implemented environment specific configurations using variables and workspaces, achieving consistent and repeatable deployments across environments while reducing provisioning time by 70 percent. \n\n📚 Continuous learner in DevOps & Cloud`;
     if (cmd === "contact")
       return `Email: harshchoubey113@gmail.com\nGithub: https://github.com/Harsh7209\nLinkedIn: https://www.linkedin.com/in/harshchoubey113/`;
     if (cmd === "date") return new Date().toString();
@@ -122,7 +144,14 @@ function App() {
       window.open("https://www.linkedin.com/in/harshchoubey113/", "_blank");
       return "Opening LinkedIn...";
     }
-    if (cmd === "hack") return "Injecting payload... █████████ SUCCESS 😈";
+    if (cmd === "hack")
+      return `You just knocked on the wrong system.
+"Access denied — and now you're being watched."
+"That was a mistake you can't undo."
+"Unauthorized attempt logged. Game over."
+"You shouldn't have done that. 🔥
+"Trace initiated… you’re already too late." 👿
+`;
     if (cmd === "clear") {
       setHistory([]);
       return "";
