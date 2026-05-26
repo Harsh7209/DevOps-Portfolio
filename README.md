@@ -319,26 +319,6 @@ Edit `css/style.css` to change the color scheme:
   --bg-dark: #0a0e27;
 }
 ```
-
-### **Add New Projects**
-
-Add your DevOps projects to the portfolio:
-
-```javascript
-// Add to projects array in js/main.js
-const projects = [
-  {
-    id: 1,
-    title: "Kubernetes Cluster Setup",
-    description: "Automated K8s cluster deployment",
-    tags: ["Kubernetes", "Docker", "DevOps"],
-    image: "assets/images/project-1.png",
-    link: "https://github.com/yourrepo/project"
-  },
-  // Add more projects...
-];
-```
-
 ---
 
 ## 🔧 Configuration
@@ -414,48 +394,6 @@ The `vercel.json` file contains deployment settings:
 - ✅ Implement Open Graph tags
 
 ---
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how to get started:
-
-### **1. Fork the Repository**
-```bash
-# Click the "Fork" button on GitHub
-```
-
-### **2. Create a Feature Branch**
-```bash
-git checkout -b feature/amazing-feature
-```
-
-### **3. Make Your Changes**
-```bash
-# Edit files as needed
-git add .
-git commit -m "Add amazing feature"
-```
-
-### **4. Push to Your Fork**
-```bash
-git push origin feature/amazing-feature
-```
-
-### **5. Open a Pull Request**
-- Navigate to the original repository
-- Click "New Pull Request"
-- Describe your changes clearly
-- Submit the PR
-
-### **Code Standards**
-- Follow the existing code style
-- Add comments for complex logic
-- Test your changes thoroughly
-- Update documentation as needed
-- Keep commits atomic and meaningful
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License** - see the LICENSE file for details.
@@ -471,22 +409,6 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 ---
 
-## 💬 Support
-
-### **Need Help?**
-
-<div align="center">
-
-| Contact Method | Details |
-|---|---|
-| 📧 **Email** | [Send me an email](mailto:your.email@example.com) |
-| 🐙 **GitHub Issues** | [Create an issue](https://github.com/Harsh7209/DevOps-Portfolio/issues) |
-| 💼 **LinkedIn** | [Connect with me](https://linkedin.com/in/yourprofile) |
-| 🐦 **Twitter** | [Follow me](https://twitter.com/yourprofile) |
-| 💬 **Discussions** | [Join our discussions](https://github.com/Harsh7209/DevOps-Portfolio/discussions) |
-
-</div>
-
 ### **Resources**
 - 📚 [Frequently Asked Questions](./docs/FAQ.md)
 - 🐛 [Known Issues](https://github.com/Harsh7209/DevOps-Portfolio/issues?q=is%3Aissue+label%3A%22known+issue%22)
@@ -494,18 +416,6 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 - 🗺️ [Roadmap](./ROADMAP.md)
 
 ---
-
-## 🌟 Show Your Support
-
-If you find this project helpful, please consider:
-
-- ⭐ **Star this repository** - It helps other developers discover this project
-- 🍴 **Fork the repository** - Create your own version
-- 🐦 **Share on social media** - Spread the word
-- 💬 **Provide feedback** - Help us improve
-- 🤝 **Contribute** - Submit pull requests with improvements
-
-<div align="center">
 
 ### ⭐ If this project helped you, please star it! ⭐
 
