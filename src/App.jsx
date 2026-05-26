@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-import bootBg from "./assets/boot-bg.jpg";
+import image from "./assets/image.jpg";
 import mainBg from "./assets/main-bg.jpg";
 
 function App() {
@@ -292,7 +292,7 @@ Linux System Administration & Server Management | Shell Scripting & Task Automat
           overflow: "hidden",
           fontSize: "clamp(12px, 1.3vw, 15px)",
           color: "#00ff00",
-          backgroundImage: `url(${booting ? bootBg : mainBg})`,
+          backgroundImage: `url(${booting ? image : mainBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
