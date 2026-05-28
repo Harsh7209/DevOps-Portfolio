@@ -1,3 +1,4 @@
+# functional  page written inn javascript 
 import { useState, useEffect, useRef } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
