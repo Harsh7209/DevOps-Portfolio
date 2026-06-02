@@ -24,12 +24,12 @@ spec:
           requests:
             memory: "256Mi"
             cpu: "500m"
-        limits:
-          memory: "512Mi"
-          cpu: "1000m"
+          limits:
+            memory: "512Mi"
+            cpu: "1000m"
 
         readinessProbe:
           tcpSocket:
-          port: 3000                
-        initialDelaySeconds: 5      
-        periodSeconds: 10
+            port: 3000                
+          initialDelaySeconds: 5      
+          periodSeconds: 10
