@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: portfolio-service
+  namespace: portfolio
+spec:
+  type: ClusterIP
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 3600
+  selector:
+    app: portfolio
+  ports:
+    - port: 3000
+      targetPort: 3000
