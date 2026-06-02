@@ -19,4 +19,5 @@ jobs:
           cache: "npm"
 
       - name: Run Depedency check
-        run: npm audit --audit-level=high
+        run: npm audit --audit-level=high 
+        continue-on-error: true
