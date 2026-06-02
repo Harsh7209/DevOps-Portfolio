@@ -1,6 +1,7 @@
 name: Secret leaks Scan
 
-on: push
+on: 
+    workflow_dispatch:
 jobs: 
     Secret_leaks_detection:
         runs-on: ubuntu-latest

@@ -1,8 +1,6 @@
 name: Depedency check for node app
 on:
-  push:
-    branches: [main]
-
+    workflow_dispatch:
 jobs:
   Depedency-Reviewer:
     runs-on: ubuntu-latest
