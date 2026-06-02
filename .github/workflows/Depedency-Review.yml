@@ -1,0 +1,14 @@
+name: Depedency check for node app
+on: push
+
+jobs: 
+    Depedency-Reviewer:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Code Checkout
+              uses: actions/checkout@v4
+              with: 
+                fetch-depth: 0
+            
+            - name: Depedency check using github action
+              uses: actions/dependency-review-action@v4
