@@ -1,0 +1,38 @@
+name: Build and Scan Docker  Image
+
+on:
+  workflow_dispatch:
+   
+
+jobs:
+  build-and-scan_Docker_image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+    
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .       
+          load: true             
+          tags: harsh9308/devops-portfolio:${{ github.sha }}
+          
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'harsh9308/devops-portfolio:${{ github.sha }}'
+          format: 'table'
+          exit-code: '1' 
+          severity: 'CRITICAL'
