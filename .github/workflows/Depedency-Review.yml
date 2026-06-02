@@ -1,17 +1,22 @@
 name: Depedency check for node app
 on:
-    push:
-        branches: [main]
- 
+  push:
+    branches: [main]
 
-jobs: 
-    Depedency-Reviewer:
-        runs-on: ubuntu-latest
-        steps: 
-            - name: Code Checkout
-              uses: actions/checkout@v4
-              with: 
-                fetch-depth: 0
-            
-            - name: Depedency check using github action
-              uses: actions/dependency-review-action@v4
+jobs:
+  Depedency-Reviewer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup node environment
+        uses: actions/setup-node@v4
+        with:
+          node-node: "20" # Match your specific version
+          cache: "npm"
+
+      - name: Run Depedency check
+        run: npm audit --audit-level=high
