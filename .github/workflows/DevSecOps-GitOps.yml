@@ -5,24 +5,25 @@ on:
 permissions:
   contents: write
 jobs: 
+    # Job - 1
     Git-Laeks-check:
         uses: ./.github/workflows/Git-Leaks.yml
         secrets: inherit
-
+     # Job - 2
     Depedency-check:
         uses: ./.github/workflows/Depedency-Review.yml
         secrets:  inherit
-    
+     # Job - 3
     Docker-file-linter:
         uses: ./.github/workflows/Docker-file-linter.yml
         secrets: inherit
         needs: [Git-Laeks-check]
-
+     # Job - 4
     Trivy-Lint:
         uses: ./.github/workflows/Trivy-Scan.yml
         secrets: inherit
         needs: [Depedency-check , Docker-file-linter]
-    
+     # Job - 5
     CI-Workflow-for-SkillPulse: 
         uses: ./.github/workflows/CI.yml
         secrets: inherit
