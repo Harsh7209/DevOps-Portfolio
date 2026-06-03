@@ -1,3 +1,4 @@
+# Namespace Configuration file for Portfolio Project
 kind: Namespace
 apiVersion: v1
 metadata:
