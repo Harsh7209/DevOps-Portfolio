@@ -2,7 +2,7 @@
 name: Secret leaks Scan
 
 on: 
-    workflow_dispatch:
+    workflow_call:
 jobs: 
     Secret_leaks_detection:
         runs-on: ubuntu-latest
