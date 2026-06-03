@@ -1,0 +1,31 @@
+#Complete DevSecOps workflow + gitops
+name: Complete workflow for Portfolio Project
+on:
+    push:
+permissions:
+  contents: write
+jobs: 
+    Git-Laeks-check:
+        uses: ./.github/workflows/Git-Leaks.yml
+        secrets: inherit
+
+    Depedency-check:
+        uses: ./.github/workflows/Depedency-Review.yml
+        secrets:  inherit
+    
+    Docker-file-linter:
+        uses: ./.github/workflows/docker-file-lineter.yml
+        secrets: inherit
+        needs: [Git-Laeks-check]
+
+    Trivy-Lint:
+        uses: ./.github/workflows/Trivy-Scan.yml
+        secrets: inherit
+        needs: [Depedency-check , Docker-file-linter]
+    
+    CI-Workflow-for-SkillPulse: 
+        uses: ./.github/workflows/CI.yml
+        secrets: inherit
+        needs: [ Git-Laeks-check,Docker-file-linter,Trivy-Lint]
+    
+   
