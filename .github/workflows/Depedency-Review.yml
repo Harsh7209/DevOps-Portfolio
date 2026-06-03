@@ -1,3 +1,4 @@
+# Depedency linter worlflow
 name: Depedency check for node app
 on:
     workflow_dispatch:
