@@ -14,7 +14,7 @@ jobs:
         secrets:  inherit
     
     Docker-file-linter:
-        uses: ./.github/workflows/docker-file-lineter.yml
+        uses: ./.github/workflows/Docker-file-linter.yml
         secrets: inherit
         needs: [Git-Laeks-check]
 
