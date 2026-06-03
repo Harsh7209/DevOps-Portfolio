@@ -1,3 +1,4 @@
+# Docker file linter workflow
 name: Docker file lint
 on:
   workflow_dispatch:
