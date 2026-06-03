@@ -47,7 +47,7 @@ module "eks" {
 
   # Managed Node Group
   eks_managed_node_groups = {
-    skillpulse-ng = {
+    portfolio-ng = {
       instance_types = [var.node_instance_type]
       desired_size   = var.node_desired_count
       min_size       = var.node_desired_count
