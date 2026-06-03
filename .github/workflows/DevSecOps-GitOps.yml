@@ -1,7 +1,7 @@
 #Complete DevSecOps workflow + gitops pipeline for portfolio project
 name: Complete workflow for Portfolio Project
 on:
-    push:
+    workflow_dispatch:
 permissions:
   contents: write
 jobs: 
