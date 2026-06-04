@@ -1,0 +1,14 @@
+name: Secret-Scanner
+on:
+    push:
+jobs: 
+    Secret-Scanner:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Code Checkout
+              uses: actions/checkout@v4
+              with: 
+                fetch-depth: 0
+
+            - name: Run GitLeaks
+              uses:  gitleaks/gitleaks-action@v2
