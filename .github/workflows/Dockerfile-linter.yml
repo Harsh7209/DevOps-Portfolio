@@ -1,3 +1,4 @@
+# Scanning Docker file using HadoLint
 name: Docker file linter using hadolint
 on:
     workflow_call: 
