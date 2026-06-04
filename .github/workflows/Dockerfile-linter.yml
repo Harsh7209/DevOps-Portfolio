@@ -1,0 +1,15 @@
+name: Docker file linter using hadolint
+on:
+    workflow_dispatch:
+jobs:
+    Dockerfile-linter:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Code Checkout
+              uses: actions/checkout@v4
+
+            - name: Run Hadolint
+              uses: hadolint/hadolint-action@v3.1.0
+              with:
+                dockerfile: Dockerfile
+
