@@ -1,5 +1,5 @@
 #Complete DevSecOps workflow + gitops for portfolio project
-name: Complete workflow for Project-4
+name: Complete workflow for portfolio project
 on:
     push:
 permissions:
