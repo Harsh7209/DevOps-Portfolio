@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: portfolio-container
-        image: harsh9308/devops-portfolio:dd648cf
+        image: harsh9308/devops-portfolio:8156cd1
         ports:
         - containerPort: 3000
         resources:
