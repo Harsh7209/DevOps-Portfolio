@@ -1,6 +1,6 @@
 name: Trivy scan for docker image
 on:
-  workflow_dispatch:
+  workflow_call:
 jobs:
   Trivy_scanner:
     runs-on: ubuntu-latest

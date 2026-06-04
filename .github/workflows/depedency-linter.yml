@@ -1,6 +1,6 @@
 name: Depedency Linter
 on:
-    workflow_dispatch:
+    workflow_call:
 jobs: 
     Depedency-Linter:
         runs-on: ubuntu-latest

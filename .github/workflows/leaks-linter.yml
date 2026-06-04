@@ -1,6 +1,6 @@
 name: Secret-Scanner
 on:
-    workflow_dispatch:
+    workflow_call:
 jobs: 
     Secret-Scanner:
         runs-on: ubuntu-latest
