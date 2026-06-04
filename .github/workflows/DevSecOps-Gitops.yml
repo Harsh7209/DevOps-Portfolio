@@ -1,0 +1,35 @@
+#Complete DevSecOps workflow + gitops for portfolio project
+name: Complete workflow for Project-4
+on:
+    push:
+permissions:
+  contents: write
+jobs: 
+    Leaks-Linter:
+        uses: ./.github/workflows/leaks-linter.yml
+        secrets: inherit
+
+    Depedency-Lint:
+        uses: ./.github/workflows/depedency-linter.yml
+        secrets:  inherit
+    
+    Dockerfile-linter:
+        uses: ./.github/workflows/Dockerfile-linter.yml
+        secrets: inherit
+        needs: [Depedency-Lint]
+
+    
+    Trivy-lint: 
+        uses: ./.github/workflows/trivy-scan.yml
+        secrets: inherit
+        needs: [Leaks-Linter,]
+    
+  
+    
+    CI-for-project:
+        uses: ./.github/workflows/CI.yml
+        secrets: inherit
+        needs: [ Leaks-Linter, Depedency-Lint,Dockerfile-linter,  Trivy-lint]
+    
+
+    
