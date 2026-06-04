@@ -1,4 +1,5 @@
-#CI pipeline for portfolio project
+# Complete Ci workflow for portfolio project 
+name: Ci Pipeline for Portfolio
 
 on:
   workflow_dispatch:
@@ -52,3 +53,28 @@ jobs:
             ${{ env.DOCKERHUB_REPO_1 }}:${{ steps.tag.outputs.sha_short }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+
+  Update_manifest:
+    needs: [build-and-push-portfolio-image]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set image tag
+        id: tag
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Update Kubernetes  deployment workflow
+        run: |
+          sed -i "s|image: ${{ env.DOCKERHUB_REPO_1 }}:.*|image: ${{ env.DOCKERHUB_REPO_1 }}:${{ steps.tag.outputs.sha_short }}|" kubernetes/deployment.yml
+
+
+      - name: Commit updated manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add kubernetes/deployment.yml
+          git diff --staged --quiet || git commit -m "ci: update skillpulse image to ${{ steps.tag.outputs.sha_short }} [skip ci]"
+          git push
