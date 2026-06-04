@@ -1,0 +1,21 @@
+name: Depedency Linter
+on:
+    push:
+jobs: 
+    Depedency-Linter:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Code Checkout
+              uses:  actions/checkout@v4
+
+            - name: setup Node Env
+              uses: actions/setup-node@v4
+              with:
+                node-version: '26'
+                cache: 'npm'
+
+            - name: Install depedency
+              run: npm ci
+
+            - name: Audit Depedency
+              run: npm audit --audit-level=high
