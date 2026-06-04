@@ -1,4 +1,4 @@
-name: Ci Pipeline for Portfolio
+#CI pipeline for portfolio project
 
 on:
   workflow_dispatch:
