@@ -31,5 +31,5 @@ variable "node_desired_count" {
 variable "node_max_count" {
   description = "Maximum number of worker nodes"
   type        = number
-  default     = 5
+  default     = 8
 }
