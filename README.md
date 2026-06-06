@@ -461,8 +461,8 @@ You're free to use this project for personal and commercial purposes. Just remem
 ### **Need Help?**
 - 📧 **Email**: [harshchoubey113@gmail.com](mailto:harshchoubey113@gmail.com)
 - 🐙 **GitHub Issues**: [Open an Issue](https://github.com/Harsh7209/DevOps-Portfolio/issues)
-- 💼 **LinkedIn**: [Connect with Harsh](https://linkedin.com/in/harsh-choubey)
-- 🐦 **Twitter**: [@harsh_devops](https://twitter.com/harsh_devops)
+- 💼 **LinkedIn**: [Connect with Harsh](www.linkedin.com/in/harshchoubey113)
+
 
 ### **Frequently Asked Questions**
 
